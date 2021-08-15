@@ -1,0 +1,40 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+
+  <route path="login">
+    <application name="@vue-admin/login"></application>
+  </route>
+
+  <route path="/management/">
+    <div class="container">
+      <nav class="nav">
+        <application name="@vue-admin/sidebar"></application>
+      </nav>
+
+      <div class="main">
+        div
+        <application name="@vue-admin/header"></application>
+      </div>
+    </div>
+  </route>
+
+  <route default>
+    <h1>404 Not Found</h1>
+  </route>
+</single-spa-router>
