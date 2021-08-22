@@ -21,7 +21,24 @@
     <application name="@vue-admin/login"></application>
   </route>
 
-  <route path="/">
+  <route default>
+    <style>
+      .container {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+      }
+
+      .nav {
+        width: 250px;
+        height: 100vh;
+      }
+
+      .main {
+        flex: 1;
+        height: 100vh;
+      }
+    </style>
     <div class="container">
       <nav class="nav">
         <application name="@vue-admin/sidebar"></application>
@@ -29,11 +46,11 @@
 
       <div class="main">
         <application name="@vue-admin/header"></application>
-      </div>
 
-      <route default>
-        <h1>404 Not Found</h1>
-      </route>
+        <route default>
+          <h1>404 Not Found</h1>
+        </route>
+      </div>
     </div>
   </route>
 </single-spa-router>
