@@ -21,20 +21,19 @@
     <application name="@vue-admin/login"></application>
   </route>
 
-  <route path="/management/">
+  <route path="/">
     <div class="container">
       <nav class="nav">
         <application name="@vue-admin/sidebar"></application>
       </nav>
 
       <div class="main">
-        div
         <application name="@vue-admin/header"></application>
       </div>
-    </div>
-  </route>
 
-  <route default>
-    <h1>404 Not Found</h1>
+      <route default>
+        <h1>404 Not Found</h1>
+      </route>
+    </div>
   </route>
 </single-spa-router>
