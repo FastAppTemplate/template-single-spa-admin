@@ -3,6 +3,7 @@ import singleSpaVue from "single-spa-vue";
 
 import App from "./App.vue";
 import router from "./router";
+import elementUi from "./plugins/element-ui";
 
 const vueLifecycles = singleSpaVue({
   createApp,
@@ -22,6 +23,7 @@ const vueLifecycles = singleSpaVue({
   },
   handleInstance(app) {
     app.use(router);
+    app.use(elementUi);
   },
 });
 
