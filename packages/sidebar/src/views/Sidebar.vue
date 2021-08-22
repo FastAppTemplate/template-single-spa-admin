@@ -2,7 +2,7 @@
 
 <template>
   <div :class="$style.container">
-    <el-menu :default-openeds="['1', '3']">
+    <el-menu :default-openeds="['1', '3']" :class="$style.menu">
       <el-submenu index="1">
         <template #title><i class="el-icon-message"></i>导航一</template>
         <el-menu-item-group>
@@ -54,10 +54,14 @@
 
 <style lang="scss" module>
 .container {
-  width: 250px;
+  width: 100%;
   height: 100vh;
   overflow-y: auto;
 
   color: #333;
+}
+
+.menu {
+  height: 100%;
 }
 </style>
